@@ -44,14 +44,47 @@ for (let x=0; x<supplyChanges.length; x++ ){
 }
 
 
+
+
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
 console.log('7. Showing supplyChanges with "for of" loop');
+/*
+for (let supplyChange of supplyChanges) {
+console.log(supplyChange);
+
+}
+*/
+
+for (let supplyChange of supplyChanges){
+
+  if (supplyChange === 0){
+    console.log("no change");
+  }
+
+  if (supplyChange > 0){
+    console.log('Added ' + supplyChange + ' parts! ');
+  }
+
+  if (supplyChange < 0){
+    console.log('Removed ' + supplyChange + ' parts');
+  }
+}
+
+
+
 
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
+let sum = 0;
+console.log(supplyChanges.length);
+for (x = 0; x<supplyChanges.length; x++){
+  //console.log("Element[" + x + "]:" + supplyChanges[x]);
+  sum = sum + supplyChanges[x];
+}
+console.log(sum);
 
 // 9. We have a large stash of parts in our warehouse that we
 //    need to box up and get ready for shipment.
@@ -60,3 +93,13 @@ console.log('8. Total supplies available is:');
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+let a = 0;
+let b = 572;
+
+
+while (b > 7) {
+b = b-7;
+a++;
+}
+console.log("The number of boxes filled were:" , a);
+console.log("The remainder was:" , b);
